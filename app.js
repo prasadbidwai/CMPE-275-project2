@@ -52,7 +52,7 @@ app.post('/category', routes.addCategory);
 app.post('/category/:categoryId/product', routes.addProduct);
 
 
-
+/*
 app.get('/getBubble/:stateName/:companyName',routes.getBubble);
 app.get('/showBubble/:stateName/:companyName',routes.showBubble);
 
@@ -71,7 +71,7 @@ app.get('/showmaps', function(req, res) {
 });
 });
 
-
+*/
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

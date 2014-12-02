@@ -111,7 +111,7 @@ exports.addUserInfo = function(req,res){
 		
 		
 		
-		
+/*		
 		
     
 
@@ -230,3 +230,4 @@ exports.getBubble= function(req, res){
 	},stateName,companyName);	
 };
 
+*/
