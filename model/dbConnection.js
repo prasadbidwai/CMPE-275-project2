@@ -93,14 +93,13 @@ exports.addCategory= function(callback,data){
 
 exports.addProduct= function(callback,data,q){
 	console.log("my data"+data);
-var query= "insert into project2.product(productName, quantity, userId, expectedOffer, productDesc," +
-"productExpiryDate, isValid, categoryId,  )values('"+ 
+var query= "insert ignore into project2.product(productName, quantity, userId, expectedOffer, productDesc," +
+"productExpiryDate, isValid, categoryId)values('"+ 
 data.productName +"','"+ data.quantity+"','"+data.userId+"','"+data.expectedOffer+"','"
-+data.productDesc+"','"+data.productExpiryDate+"','"+data.isValid+"','"+data.categoryId+"')" +
-		"where categoryId='"+ q +"'";
++data.productDesc+"','"+data.productExpiryDate+"','"+data.isValid+"','"+q+"')";
 	console.log("about to call database");
 	console.log(query);
-//console.log("value of q is "+q);
+console.log("value of q is "+q);
 	connection.query(query, function(err, rows) {
 		console.log(err);
 		callback(err, rows);
